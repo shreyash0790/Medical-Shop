@@ -10,21 +10,21 @@ const Cart = (props) => {
   const medsCtx = useContext(NewMedsContext);
 
   const removeItemHandler = (items) => {
-    console.log(items)
-    
+    const foundItem = medsCtx.medsItems.filter((item) => items.id === item.id);
+    const foundItems = foundItem[0];
 
     const modifiedItem = {
-      ...items,
-      stockAmount: (items.stockAmount === "Out of Stock!")
+      ...foundItems,
+      stockAmount:
+        foundItems.stockAmount.props.children === "Out of Stock!"
           ? items.Quantity
-          : parseInt(items.stockAmount) + parseInt(items.Quantity) ,
-       
-          
+          : parseInt(foundItem.stockAmount) + parseInt(items.Quantity),
     };
 
     cartCtx.removeItems(items.id);
 
-    medsCtx. addItemToStock(modifiedItem); // from cart
+    medsCtx.addItemToStock(modifiedItem); // from cart to stock
+
   };
 
   const totalPrice = cartItems.reduce((curr, item) => {
@@ -59,9 +59,7 @@ const Cart = (props) => {
                       <button
                         type="button"
                         className="rounded-full border bg-blue-900 mt-3 px-2 py-1 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                        onClick={() =>
-                          removeItemHandler(items)
-                        }
+                        onClick={() => removeItemHandler(items)}
                       >
                         Delete
                       </button>

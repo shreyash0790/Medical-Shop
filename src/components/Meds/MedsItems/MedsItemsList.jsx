@@ -9,7 +9,7 @@ const MedsItemsList = function () {
 
     const medsCnxt=useContext(NewMedsContext);
     const availabeMeds=medsCnxt.medsItems 
-    console.log(medsCnxt)
+  
 
   return (
     <div className="  mx-auto  max-w-4xl mt-44 mb-10 bg-white rounded-xl">
