@@ -3,10 +3,11 @@ import Header from "./components/Layout/Header";
 
 import { useState } from "react";
 import CartProvider from "./store/CartProvider";
-import NewMedsProvider from "./store/NewMedsProvider";
+import NewShoeProvider from "./store/NewShoeProvider";
 
-import Meds from "./components/Meds/Meds";
-import NewMeds from "./components/Meds/NewMeds/NewMeds";
+import Shoes from "./components/Shoes/Shoes";
+
+import NewShoes from "./components/Shoes/NewShoes/NewShoes";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -20,12 +21,12 @@ function App() {
 
   return (
     <CartProvider>
-      <NewMedsProvider>
+      <NewShoeProvider>
         {cartIsShown && <Cart onClose={hideCarthandler} />}
         <Header onShow={showCarthandler} />
-        <NewMeds />
-        <Meds />
-      </NewMedsProvider>
+        <NewShoes />
+        <Shoes />
+      </NewShoeProvider>
     </CartProvider>
   );
 }

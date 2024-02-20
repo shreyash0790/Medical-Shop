@@ -6,7 +6,7 @@ import HeaderCart from "../Cart/HeaderCart";
 const Header = function (props) {
   return (
     <Fragment>
-      <div className="realtive w-full h-30 bg-blue-500">
+      <div className="realtive w-full h-30 bg-indigo-500">
         <div className="mx-auto flex w-full h-30 items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
           <div className="inline-flex items-center space-x-2">
             <span>
@@ -15,7 +15,7 @@ const Header = function (props) {
             </svg>
             </span>
             <span className=" text-white text-4xl px-5 font-extrabold ">
-             OnePharma
+             OneShoes
             </span>
           </div>
           <HeaderCart onShowCart={props.onShow} />

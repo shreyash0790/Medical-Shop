@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import Medsitems from "./MedsItems";
-import NewMedsContext from "../../../store/NewMedsContext";
+import Shoeitems from "./ShoeItems";
+import NewShoeContext from "../../../store/NewShoeContext";
 
 
 
-const MedsItemsList = function () {
+const ShoeItemsList = function () {
 
 
-    const medsCnxt=useContext(NewMedsContext);
-    const availabeMeds=medsCnxt.medsItems 
+    const shoeCnxt=useContext(NewShoeContext);
+    const availabeShoes=shoeCnxt.shoeItems 
   
 
   return (
@@ -17,8 +17,8 @@ const MedsItemsList = function () {
         <div className="px-5 py-6 md:border-r md:border-r-gray-200 md:px-8">
           <div className="flow-root">
             <ul className="-my-7 divide-y divide-gray-200">
-              {availabeMeds.map((items) => (
-                <Medsitems
+              {availabeShoes.map((items) => (
+                <Shoeitems
                   key={items.id}
                   id={items.id}
                   title={items.title}
@@ -35,4 +35,4 @@ const MedsItemsList = function () {
   );
 };
 
-export default MedsItemsList;
+export default ShoeItemsList;

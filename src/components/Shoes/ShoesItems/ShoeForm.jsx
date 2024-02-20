@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import MedsFormInput from "../../UI/MedsFormInput";
+import MedsFormInput from "../../UI/ShoeFormInput";
 import CartContext from "../../../store/CartContext";
-import NewMedsContext from "../../../store/NewMedsContext";
+import NewShoeContext from "../../../store/NewShoeContext";
 
-const MedsForm = function (props) {
+const ShoeForm = function (props) {
   const cartCnxt = useContext(CartContext);
-  const medsCnxt = useContext(NewMedsContext);
+  const shoeCnxt = useContext(NewShoeContext);
 
   const addItemToCart = (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ const MedsForm = function (props) {
           : props.items.stockAmount - quantity,
     };
 
-    medsCnxt.removeMedsItems(modifiedItem);
+    shoeCnxt.removeShoeItems(modifiedItem);
   };
 
   return (
@@ -46,4 +46,4 @@ const MedsForm = function (props) {
   );
 };
 
-export default MedsForm;
+export default ShoeForm;

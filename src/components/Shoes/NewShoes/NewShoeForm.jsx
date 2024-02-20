@@ -1,7 +1,7 @@
 import {  useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const NewMedsForm = (prop) => {
+const NewShoeForm = (prop) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredStockAmount, setEnteredStockAmount] = useState("");
   const [enteredPrice, setEnteredPrice] = useState("");
@@ -56,7 +56,7 @@ const NewMedsForm = (prop) => {
         className="font-bold  text-2xl py-4 px-8 mb-8 border-2  my-3  bg-blue-950 text-white rounded-lg"
         onClick={showform}
       >
-        Add New Meds
+        Add New Shoes
       </button>
       {isformVisble && (
         <form onSubmit={submitHandler}>
@@ -128,7 +128,7 @@ const NewMedsForm = (prop) => {
               type="submit"
               className="font-semibold py-2 px-3 my-2 border-2 border-blue-900 bg-blue-900 text-white rounded-lg mb-4"
             >
-              Add Meds
+              Add Shoes
             </button>
             <button
               type="submit"
@@ -144,4 +144,4 @@ const NewMedsForm = (prop) => {
   );
 };
 
-export default NewMedsForm;
+export default NewShoeForm;

@@ -1,4 +1,4 @@
-const MedsFormInput = function (props) {
+const ShoeFormInput = function (props) {
   return (
     <div className="flex items-center mb-0.5">
       <label className="font-bold mr-4 text-black">{props.label} </label>
@@ -10,4 +10,4 @@ const MedsFormInput = function (props) {
   );
 };
 
-export default MedsFormInput;
+export default ShoeFormInput;

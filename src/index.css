@@ -9,8 +9,12 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #494848;
+  color: rgba(255, 255, 255, 5);
+  background-color:white;
+  background-image: url('https://images.unsplash.com/photo-1465877783223-4eba513e27c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

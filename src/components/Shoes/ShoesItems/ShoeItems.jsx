@@ -1,5 +1,5 @@
-import MedsForm from "./MedsForm";
-const Medsitems = function (props) {
+import ShoeForm from "./ShoeForm";
+const Shoeitems = function (props) {
   return (
     <div>
       <li className="flex items-stretch justify-between space-x-5 py-7">
@@ -18,11 +18,11 @@ const Medsitems = function (props) {
           </div>
         </div>
         <div className="ml-auto flex flex-col items-end justify-between">
-          <MedsForm items={props} id={props.id} />
+          <ShoeForm items={props} id={props.id} />
         </div>
       </li>
     </div>
   );
 };
 
-export default Medsitems;
+export default Shoeitems;

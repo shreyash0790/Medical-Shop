@@ -2,15 +2,15 @@
 import Modal from "../UI/Modal";
 import { Fragment, useContext } from "react";
 import CartContext from "../../store/CartContext";
-import NewMedsContext from "../../store/NewMedsContext";
+import NewShoeContext from "../../store/NewShoeContext";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   const cartItems = cartCtx.items;
-  const medsCtx = useContext(NewMedsContext);
+  const shoeCtx = useContext(NewShoeContext);
 
   const removeItemHandler = (items) => {
-    const foundItem = medsCtx.medsItems.filter((item) => items.id === item.id);
+    const foundItem = shoeCtx.shoeItems.filter((item) => items.id === item.id);
     const foundItems = foundItem[0];
 
     const modifiedItem = {
@@ -23,7 +23,7 @@ const Cart = (props) => {
 
     cartCtx.removeItems(items.id);
 
-    medsCtx.addItemToStock(modifiedItem); // from cart to stock
+    shoeCtx.addItemToStock(modifiedItem); // from cart to stock
 
   };
 
