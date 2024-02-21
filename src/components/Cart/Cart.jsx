@@ -16,9 +16,9 @@ const Cart = (props) => {
     const modifiedItem = {
       ...foundItems,
       stockAmount:
-        foundItems.stockAmount.props.children === "Out of Stock!"
-          ? items.Quantity
-          : parseInt(foundItem.stockAmount) + parseInt(items.Quantity),
+      foundItems.stockAmount === 0
+      ? items.Quantity
+      : parseInt(foundItems.stockAmount) + parseInt(items.Quantity),
     };
 
     cartCtx.removeItems(items.id);
