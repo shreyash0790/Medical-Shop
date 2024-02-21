@@ -13,12 +13,14 @@ const Cart = (props) => {
     const foundItem = medsCtx.medsItems.filter((item) => items.id === item.id);
     const foundItems = foundItem[0];
 
+    console.log(foundItems)
+
     const modifiedItem = {
       ...foundItems,
       stockAmount:
-        foundItems.stockAmount.props.children === "Out of Stock!"
+        foundItems.stockAmount === 0
           ? items.Quantity
-          : parseInt(foundItem.stockAmount) + parseInt(items.Quantity),
+          : parseInt(foundItems.stockAmount) + parseInt(items.Quantity),
     };
 
     cartCtx.removeItems(items.id);

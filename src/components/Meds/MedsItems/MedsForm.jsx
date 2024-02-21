@@ -16,7 +16,7 @@ const MedsForm = function (props) {
       ...props.items,
       stockAmount:
         props.items.stockAmount - quantity <= 0
-          ? <span className=" inline-block  text-red-900  " >Out of Stock!</span>
+          ? 0
           : props.items.stockAmount - quantity,
     };
 
